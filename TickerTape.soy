@@ -1,0 +1,43 @@
+{namespace tickerTape.templates}
+
+/**
+ * Create the html for a single stock item in the ticker tape
+ * @param Symbol {string}
+ * @param Volume {number}
+ * @param Bid {number}
+ * @param Change {number}
+ */
+{template .stockItem}
+<span class="stockItem">
+	<span class="symbol">{$Symbol}</span>
+	<span class="volume">
+		{call .formatVolume}
+			{param Volume: $Volume /}
+		{/call} @ 
+	</span>
+	<span class="bid">{$Bid}</span>
+
+	{if $Change < 0}
+		<span class="changeDown">{$Change}</span>
+	{else}
+		<span class="changeUp">{$Change}</span>
+	{/if}
+</span>
+{/template}
+
+/**
+ * Format the stock's volume using K, M, or B
+ * for thousands, millions, or billions!
+ * @param Volume {number}
+ */
+{template .formatVolume}
+{if $Volume < 1000}
+	{$Volume}
+{elseif $Volume < 1000000}
+	{round($Volume/1000)}K
+{elseif $Volume < 1000000000}
+	{round($Volume/1000000)}M
+{else}
+	{round($Volume/1000000000)}B
+{/if}
+{/template}

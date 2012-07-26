@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Closure Ticker Tape</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+    <!-- The 'tickerTapeDiv' div is where we want the ticker tape to appear -->
+    <div id="tickerTapeDiv"></div>
+
+    <!-- With plovr running in server mode (as described) this url will return the -->
+    <!-- compiled code for the configuration with given id (tickerTape, in our case) -->
+    <!-- When setting the mode parameter to 'RAW' the output gets loaded into -->
+    <!-- individual script tags, which can be useful for development if you end up -->
+    <!-- needing to step into the code to debug. -->	
+    <!-- <script src="http://localhost:9810/compile?id=tickerTape&mode=RAW"></script> -->
+
+    <!-- But in production we compile our JavaScript to minimize it and then just -->
+    <!-- load that here. -->
+    <script src="tickerTape-compiled.js"></script>
+
+    <!-- Now we can simply call our function to insert the ticker tape -->
+    <script>tickerTape.insert('tickerTapeDiv');</script>
+</body>
+</html>
