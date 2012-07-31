@@ -1,0 +1,32 @@
+body {
+    overflow-x: hidden;
+}
+
+.stockItem {
+    font-family:"Trebuchet MS", Helvetica, sans-serif;
+    font-size:14px;
+    display: inline-block;
+    width:250px;
+}
+
+.symbol {
+    font-weight:bold;
+    margin-right:3px;
+}
+
+.volume {
+    font-size:10px;
+    margin-right:3px;
+}
+
+.bid {
+    margin-right:10px;
+}
+
+.changeDown {
+    color: red;
+}
+
+.changeUp {
+    color: green;
+}
