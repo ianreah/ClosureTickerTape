@@ -1,0 +1,8 @@
+<div id="footer_wrap" class="outer">
+  <footer class="inner">
+	<p>&copy; {{ now | date: "%Y"}} {{ copyright_name }}</br>Hosted by <a href="https://github.com/">Github</a> and powered by <a href="http://jekyllrb.com/">Jekyll</a></p>
+  </footer>
+</div>
+{% assign copyright_name = nil %}
+{% assign now = nil %}
+

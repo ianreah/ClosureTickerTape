@@ -1,0 +1,28 @@
+<div id="header_wrap" class="outer">
+	<header class="inner">
+		<h1 id="project_title">{{ site.title }}</h1>
+		<section id="downloads">
+			<a class="zip_download_link" href="https://github.com/ianreah/ClosureTickerTape/zipball/master">Download this project as a .zip file</a>
+			<a class="tar_download_link" href="https://github.com/ianreah/ClosureTickerTape/tarball/master">Download this project as a tar.gz file</a>
+			<a id="forkme_banner" href="https://github.com/ianreah/ClosureTickerTape">View on GitHub</a>
+		</section>
+		<div id="menu_wrapper">
+			<div class="left"></div>
+			<ul id="menu">
+				{% for node in navigable_pages %}
+					<li {% if current_page == node.title %}class="active"{% endif %}><a href="{{ node.url }}">{{ node.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		<ul id="social">
+			<li id="github"><a href="https://github.com/ianreah"><span>#</span></a></li>
+			<li id="twitter"><a href="https://twitter.com/ianreah"><span>#</span></a></li>
+			<li id="codeproject"><a href="http://www.codeproject.com/Members/ianreah"><span>#</span></a></li>
+			<li id="stackoverflow"><a href="http://stackoverflow.com/users/76116/ianr"><span>#</span></a></li>
+			<li id="linkedin"><a href="http://uk.linkedin.com/pub/ian-reah/3a/326/50a"><span>#</span></a></li>
+			<li id="rss"><a href="/rss.xml"><span>#</span></a></li>
+		</ul>
+	</header>
+</div>
+{% assign navigable_pages = nil %}
+{% assign current_page = nil %}

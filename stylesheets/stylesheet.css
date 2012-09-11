@@ -1,9 +1,10 @@
 /*******************************************************************************
-Slate Theme for Github Pages
+Based on Slate Theme for Github Pages
 by Jason Costello, @jsncostello
 *******************************************************************************/
 
-@import url(pygment_trac.css);
+/* TODO: syntax highlighting      */
+/* @import url(pygment_trac.css); */
 
 /*******************************************************************************
 MeyerWeb Reset
@@ -130,9 +131,30 @@ a {
   text-shadow: #0090ff 0px 0px 2px;
 }
 
-footer a:hover {
+#main_content p {
+	text-align: justify;
+}
+
+footer a:hover, header a:hover {
   color: #43adff;
   text-shadow: #0090ff 0px 0px 2px;
+}
+
+.active a {
+  color: #FF7B4F;
+}
+
+.active a:hover {
+  color: #FFAD43;
+  text-shadow: #FF9000 0px 0px 2px;
+}
+
+footer p {
+	text-align: right;
+}
+
+header ul > li {
+	display: inline-block;
 }
 
 em {
@@ -205,7 +227,6 @@ ul, ol, dl {
 
 ul li {
   list-style: inside;
-  padding-left: 20px;
 }
 
 ol li {
@@ -262,9 +283,110 @@ img {
   max-width: 100%;
 }
 
+#menu {
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	text-transform: capitalize;
+	font-size: 13px;
+	height: 42px;
+	background: url(../images/menu_bg.png);
+}
+
+#social {
+	margin: 0px 0px 0px 90px;
+}
+
+#social li {
+	background: url(../images/social_sprite.png);
+	width: 24px;
+	height: 24px;
+	opacity: 0.6;
+}
+
+#social li:hover {
+	opacity: 1;
+}
+
+#social li a {
+	display: block;
+	height: 24px;
+}
+
+#social span {
+	display: none;
+}
+
+#social #github {
+	background-position: -0px -0px;
+}
+
+#social #twitter {
+	background-position: -0px -34px;
+}
+
+#social #codeproject {
+	background-position: -0px -136px;
+}
+
+#social #stackoverflow {
+	background-position: -0px -102px;
+}
+
+#social #linkedin {
+	background-position: -0px -170px;
+}
+
+#social #rss {
+	background-position: -0px -68px;
+}
+
+#menu li a {
+	padding: 0 20px;
+	line-height: 42px;
+}
+
+#menu_wrapper ul {
+	margin-left: 23px;
+}
+
+#menu_wrapper {
+	padding: 0 23px 0 0;
+	background: url(../images/menu_ends.png) no-repeat right;
+	height: 42px;
+	position: absolute;
+	top: 15px;
+	right: 0px;
+}
+
+#menu_wrapper div {
+	float: left;
+	height: 42px;
+	width: 23px;
+	background: url(../images/menu_ends.png) no-repeat left;
+}
+
+.post-meta > li{
+	display: inline-block;
+	padding: 0 16px;
+	color: #909090;
+	font-size: 14px;
+}
+
+.post-comments {
+	background: url(../images/icon-comments.png) 0 50% no-repeat;
+}
+
+.post-date {
+	background: url(../images/icon-date.png) 0 50% no-repeat;
+}
+
 /*******************************************************************************
 Full-Width Styles
 *******************************************************************************/
+
+header {
+	background: url(../images/header_bg.png) no-repeat left;
+}
 
 .outer {
   width: 100%;
@@ -273,24 +395,21 @@ Full-Width Styles
 .inner {
   position: relative;
   max-width: 640px;
-  min-height: 100px;
   padding: 20px 10px;
   margin: 0 auto;
 }
 
 #forkme_banner {
   display: block;
-  position: absolute;
-  top:0;
-  right: 10px;
+  float: right;
+  margin: 15px 6px;
   z-index: 10;
   padding: 10px 50px 10px 10px;
   color: #fff;
   background: url('../images/blacktocat.png') #0090ff no-repeat 95% 50%;
   font-weight: 700;
   box-shadow: 0 0 10px rgba(0,0,0,.5);
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
+  border-radius: 2px;
 }
 
 #header_wrap {
@@ -303,11 +422,11 @@ Full-Width Styles
 }
 
 #header_wrap .inner {
-  padding: 50px 10px 30px 10px;
+  padding: 70px 10px 30px 10px;
 }
 
 #project_title {
-  margin: 0;
+  margin: 0px 0px 0px 90px;
   color: #fff;
   font-size: 42px;
   font-weight: 700;
@@ -369,7 +488,6 @@ Full-Width Styles
 
 #main_content {
   padding-top: 40px;
-  max-width: 100%;
 }
 
 #footer_wrap {
