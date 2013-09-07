@@ -1,10 +1,9 @@
-#main_content {
-	height: 500px;
-	max-width: 100%;
-}
-
 body {
     overflow-x: hidden;
+}
+
+#tickerTapeDiv {
+	top: 0px !important;
 }
 
 .stockItem {
